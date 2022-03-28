@@ -3,7 +3,11 @@ import time
 import gc
 
 import numpy as np
-import tensorflow as tf
+#import tensorflow as tf
+# https://stackoverflow.com/questions/37383812/tensorflow-module-object-has-no-attribute-placeholder #
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+# #
 from VGG16 import VGG16mo
 from utils.utils import *
 import cv2
